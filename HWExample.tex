@@ -1,0 +1,73 @@
+% Page setup
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+% Package for the fonts and math
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+% Header with name and extra information
+\pagestyle{fancy}
+\lhead{Stu Dent}
+\rhead{Homework $i$}
+
+% The macros and tools
+\input{HWMacros.tex}
+
+% The actual questions in the document
+\begin{document}
+\begin{enumerate}
+\item
+	\begin{enumerate}
+	\item $1 + 1 = 2$
+	\item $\{ \ep \}$
+	\item $\emptyset$
+	\item $\{ n | n \in S \}$
+	\end{enumerate}
+\item Given $\Sigma$:
+	\begin{eqnarray*}
+		\nimp
+		\ep \in \mathbb{PAL}
+		\\
+		\sigma \in \Sigma
+		\imp
+		\sigma \in \mathbb{PAL}
+		\\
+		x \in \mathbb{PAL}, \sigma \in \Sigma
+		\imp
+		\sigma x \sigma \in \mathbb{PAL}
+	\end{eqnarray*}
+\item
+	Prove: $|xy| = |x| + |y|$ \\
+	Given:
+	\begin{eqnarray}
+		\nimp
+		| \ep | = 0
+		\\
+		x\in\Sigma^*, \sigma \in \Sigma
+		\imp
+		| x \sigma | = | x | + 1
+		\\
+		x \in \Sigma
+		\imp
+		x\sigma = x
+	\end{eqnarray}
+	\setcounter{equation}{0}
+	Base case:
+	\\
+	Assume $y = \ep$
+	\begin{eqnarray*}
+		      |xy|
+		\eq   | x \ep |
+		\next |x|
+		\next |x| + 0
+		\next |x| + | \ep |
+		\next |x| + |y|
+	\end{eqnarray*}
+	Induction step is left as an exercise for the reader.
+	\done
+\end{enumerate}
+\end{document}
