@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{tikz}
@@ -29,7 +30,7 @@
 	\item $\{ n | n \in S \}$
 	\end{enumerate}
 \item Given $\Sigma$:
-	\begin{eqnarray*}
+	\begin{align*}
 		\nimp
 		\ep \in \mathbb{PAL}
 		\\
@@ -40,11 +41,11 @@
 		x \in \mathbb{PAL}, \sigma \in \Sigma
 		\imp
 		\sigma x \sigma \in \mathbb{PAL}
-	\end{eqnarray*}
+	\end{align*}
 \item
-	Prove: $|xy| = |x| + |y|$ \\
+	\begin{proof}[Prove: $|xy| = |x| + |y|$]
 	Given:
-	\begin{eqnarray}
+	\begin{align}
 		\nimp
 		| \ep | = 0
 		\\
@@ -55,21 +56,21 @@
 		x \in \Sigma
 		\imp
 		x\sigma = x
-	\end{eqnarray}
+	\end{align}
 	\setcounter{equation}{0}
 	Base case:
 	\\
 	Assume $y = \ep$
-	\begin{eqnarray*}
+	\begin{align*}
 		      |xy|
 		\eq   | x \ep |
 		\next |x|
 		\next |x| + 0
 		\next |x| + | \ep |
 		\next |x| + |y|
-	\end{eqnarray*}
+	\end{align*}
 	Induction step is left as an exercise for the reader.
-	\done
+	\end{proof}
 \end{enumerate}
 \usetikzlibrary{automata,positioning}
 \begin{tikzpicture}[shorten >=1pt,node distance=2cm,on grid,auto] 
